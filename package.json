@@ -1,6 +1,14 @@
 {
   "name": "ci-cd-poc",
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT"
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "shared": "yarn workspace @packages/shared",
+    "editor": "yarn workspace @apps/editor",
+    "store": "yarn workspace @apps/store"
+  }
 }
