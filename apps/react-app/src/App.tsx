@@ -1,11 +1,13 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import Button from "@packages/shared/dist/src/components/Button";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Button color="red">react button</Button>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
