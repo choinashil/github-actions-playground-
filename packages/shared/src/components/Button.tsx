@@ -3,7 +3,7 @@ interface ButtonProps {
   color: "red" | "blue";
 }
 
-const Button: React.FC<ButtonProps> = ({ children = "버튼", color }) => {
+const Button: React.FC<ButtonProps> = ({ children, color }) => {
   return (
     <button type="button" style={{ backgroundColor: `${color}` }}>
       {children}
