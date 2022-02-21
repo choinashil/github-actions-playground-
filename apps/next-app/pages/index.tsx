@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Button from "@shared/components/Button";
+import Title from "@next-app/components/Title";
 
 const Home: NextPage = () => {
   return (
@@ -14,11 +15,12 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
+        <Title color="blue">I'm next-app Title!</Title>
+        <Button color="red">next button</Button>
+
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
-
-        <Button color="red">next button</Button>
 
         <p className={styles.description}>
           Get started by editing{" "}

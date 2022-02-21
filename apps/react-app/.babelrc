@@ -4,6 +4,7 @@
       "root": "",
       "alias": {
         "@shared": "@packages/shared/dist/src",
+        "@react-app": "./src"
       }
     }]
   ]
