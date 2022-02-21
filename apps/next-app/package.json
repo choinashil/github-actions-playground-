@@ -1,5 +1,5 @@
 {
-  "name": "@apps/editor",
+  "name": "@apps/next-app",
   "version": "1.0.0",
   "private": true,
   "scripts": {
