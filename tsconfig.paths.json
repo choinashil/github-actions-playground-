@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": "",
+    "paths": {
+      "next-app/*": ["./apps/next-app/src/*"],
+      "react-app/*": ["./apps/react-app/src/*"],
+      "@shared/*": ["./packages/shared/dist/src/*"]
+    }
+  }
+}
