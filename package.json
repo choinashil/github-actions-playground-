@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "shared": "yarn workspace @packages/shared",
-    "editor": "yarn workspace @apps/editor",
-    "store": "yarn workspace @apps/store"
+    "next": "yarn workspace @apps/next-app",
+    "react": "yarn workspace @apps/react-app"
   }
 }
