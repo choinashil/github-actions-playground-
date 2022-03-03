@@ -1,0 +1,15 @@
+name: PR 생성 시 셀 별로 슬랙 알림 보내기
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  run_if:
+    if: startWith(github.head_ref, 'a/')
+    steps:
+      - run: |
+        curl -X POST \
+        -H 'Content-type: application/json' \
+        --data "{'text': `${{ github.event.pull_request.title }}`}" \
+        https://hooks.slack.com/services/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
+
