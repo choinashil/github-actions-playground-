@@ -1,16 +1,21 @@
-name: PR 생성 시 셀 별로 슬랙 알림 보내기
-on:
-  pull_request:
-    types: [opened]
-
-jobs:
-  run_if:
-    if: startWith(github.head_ref, 'a/')
-    runs-on: ubuntu-latest
-    steps:
-      - run: |
-        curl -X POST \
-        -H 'Content-type: application/json' \
-        --data "{'text': `${{ github.event.pull_request.title }}`}" \
-        https://hooks.slack.com/services/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
-
+- name: Send custom JSON data to Slack workflow
+  id: slack
+  uses: slackapi/slack-github-action@v1.18.0
+  with:
+    # For posting a rich message using Block Kit
+    payload: |
+      {
+        "text": "GitHub Action build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}",
+        "blocks": [
+          {
+            "type": "section",
+            "text": {
+              "type": "mrkdwn",
+              "text": "GitHub Action build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
+            }
+          }
+        ]
+      }
+  env:
+    SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+    SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
