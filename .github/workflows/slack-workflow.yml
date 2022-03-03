@@ -22,7 +22,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "GitHub Action build result"
+                    "text": "Danny Torrence left the following review for your property:"
                   }
                 }
               ]
