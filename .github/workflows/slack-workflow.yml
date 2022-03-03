@@ -6,6 +6,7 @@ on:
 jobs:
   run_if:
     if: startWith(github.head_ref, 'a/')
+    runs-on: ubuntu-latest
     steps:
       - run: |
         curl -X POST \
