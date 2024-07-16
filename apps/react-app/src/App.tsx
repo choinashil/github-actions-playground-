@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Button color="red">react button</Button>
-        <Title color="green">I'm react-app Title!</Title>
+        <Title color="green">I'm react-app Title! hihihi</Title>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
